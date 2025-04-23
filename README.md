@@ -1,12 +1,12 @@
-# VFT-LIO: Visual Feature Tracking for robust LiDAR Inertial Odometry Under Repetitive Patterns
+# VFT-LIO: Visual Feature Tracking for Robust LiDAR Inertial Odometry Under Repetitive Patterns
 
 This repository contains the implementation of **VFT-LIO**, a front-end SLAM module that enhances odometry estimation in repetitive environments such as tunnels and bridges. The method leverages **SuperPoint**, a deep learning-based visual feature extraction method, on LiDAR intensity images and refines pose estimation using ICP.
 
 ## 🔧 Features
+- Imaging LiDAR
 - Visual feature extraction from LiDAR intensity images
 - Conversion of extracted visual feature to corresponding point cloud
-- Feature-based ICP pose refinement
-- ROS-compatible implementation
+- ICP pose refinement
 
 ## 🧩 System Pipeline
 The figure below illustrates the full pipeline of VFT-LIO, including feature extraction, point cloud association, and ICP-based refinement.
@@ -17,7 +17,7 @@ The figure below illustrates the full pipeline of VFT-LIO, including feature ext
 
 ## 📸 Example Results
 
-We provide example results using our proposed VFT-LIO method in repetitive environments such as tunnels and bridges.
+We provide example results using our proposed method in repetitive environments such as tunnels and bridges.
 As shown below, the system demonstrates robust odometry estimation even in highly repetitive environments, such as tunnels and bridges.
 
 <p align="center">
@@ -37,7 +37,6 @@ cd ~/catkin_ws/src
 git clone https://github.com/yourname/VFT-LIO.git
 cd ..
 catkin_make
-source devel/setup.bash
 ```
 
 ## 🚀 How to Use
@@ -50,19 +49,16 @@ To run the system with the pre-trained weights, simply execute the following com
 ```bash
 roslaunch liosam run.launch
 rosrun lio_sam visual_tracking.py
-rosbag play bridge_0202.bag
 
 💡 **Note:** A sample dataset recorded in a repetitive environment (e.g., tunnel or bridge)  
-will be provided soon for demonstration and testing purposes.
+will be provided.
 ```
 
 ## 🔍 Modification Notice
 
 This repository is a modified version of [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM),  
-with a visual frontend added for robust odometry in repetitive environments.  
-SuperPoint was integrated for feature extraction from LiDAR intensity images.
-
-Modifications by **Donghyun Choi** (choi23@kaist.ac.kr)
+with a front-end changed for robust odometry in repetitive environments.  
+SuperPoint is integrated for feature extraction from LiDAR intensity images.
 
 ## 📚 Citations
 
