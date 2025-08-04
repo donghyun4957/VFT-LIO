@@ -2,20 +2,20 @@
 
 This repository contains the implementation of **VFT-LIO**, a front-end SLAM module that enhances odometry estimation in repetitive environments such as tunnels and bridges. The method leverages **SuperPoint**, a deep learning-based visual feature extraction method, on LiDAR intensity images and refines pose estimation using ICP.
 
-## 🔧 Features
+## Features
 - Imaging LiDAR
 - Visual feature extraction from LiDAR intensity images
 - Conversion of extracted visual feature to corresponding point cloud
 - ICP pose refinement
 
-## 🧩 System Pipeline
+## System Pipeline
 The figure below illustrates the full pipeline of VFT-LIO, including feature extraction, point cloud association, and ICP-based refinement.
 
 <p align="center">
   <img src="doc/Framework.png" width="700" height="200"/>
 </p>
 
-## 📸 Example Results
+## Example Results
 
 We provide example results using our proposed method in repetitive environments such as tunnels and bridges.
 As shown below, the system demonstrates robust odometry estimation even in highly repetitive environments, such as tunnels and bridges.
@@ -30,16 +30,16 @@ As shown below, the system demonstrates robust odometry estimation even in highl
   <img src="doc/bridge02.png" width="350" height="300"/>
 </p>
 
-## 📦 Installation
+## Installation
 
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/yourname/VFT-LIO.git
+git clone https://github.com/donghyun4957/VFT-LIO.git
 cd ..
 catkin_make
 ```
 
-## 🚀 How to Use
+## How to Use
 
 Pre-trained SuperPoint weights are provided at  
 `pretrained/superPointNet_checkpoint.pth.tar`
@@ -54,13 +54,13 @@ rosrun lio_sam visual_tracking.py
 will be provided.
 ```
 
-## 🔍 Modification Notice
+## Modification Notice
 
 This repository is a modified version of [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM),  
 with a front-end changed for robust odometry in repetitive environments.  
 SuperPoint is integrated for feature extraction from LiDAR intensity images.
 
-## 📚 Citations
+## Citations
 
 If you use this code, please cite the following works:
 
